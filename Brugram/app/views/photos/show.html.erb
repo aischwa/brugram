@@ -9,3 +9,11 @@
 
 <h2>Add a comment:</h2>
 <%=render 'comments/form' %>
+
+ <tr>
+      
+      <td><%= link_to 'like', like_photo_path %></td>
+      
+    </tr>
+
+              <%= @photo.likes %>

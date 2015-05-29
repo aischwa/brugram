@@ -39,8 +39,16 @@ class PhotosController < ActionController::Base
 			redirect_to photos_path
 		end
 
+def like
+    @photo = Photo.find(params[:id])
+    @photo.liked!
+    @photo.save
+    
+    redirect_to photo_path(@photo)
+  end
+
 		private 
 		def photo_params
-			params.requrie(:photo).permit(:caption, :image)
+			params.requrie(:photo).permit(:caption, :image, :likes)
 		end
 	end

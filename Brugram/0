@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20150529183140_add_likes_to_photo.rb

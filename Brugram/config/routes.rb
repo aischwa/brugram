@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 resources :photos do
  resources :comments
 end
-
+ get "/photos/:id/like" => "photos#like", as: 'like_photo'
+  
   # You can have the root of your site routed with "root"
   root 'photos#index'
 
