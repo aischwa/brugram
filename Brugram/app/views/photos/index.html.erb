@@ -1,0 +1,7 @@
+<h1>BruGram</h1>
+
+<p><% @photos.each do |photo| %></p>
+<p><%= image_tag photo.image %></p>
+	<%= photo.caption %>
+ <td><%= link_to 'View Photo Page', photo_path(photo) %></td>
+ <% end %>

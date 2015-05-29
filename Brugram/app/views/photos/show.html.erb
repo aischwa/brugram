@@ -1,0 +1,11 @@
+<%= image_tag @photo.image %>
+<p><%= @photo.caption %></p>
+
+<p><%= link_to 'Edit Photo', edit_photo_path(@photo) %></p>
+<p><%= link_to 'Back', photos_path %></p>
+<h2>Comments</h2>
+
+  <%= render @photo.comments %>
+
+<h2>Add a comment:</h2>
+<%=render 'comments/form' %>
