@@ -1,2 +1,4 @@
 class Photo < ActiveRecord::Base
-end
+	has_many :comments
+	validates :caption, :image,  presence: true
+	end
