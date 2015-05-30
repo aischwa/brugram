@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529183140) do
+ActiveRecord::Schema.define(version: 20150529190451) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "commenter"
@@ -30,5 +30,22 @@ ActiveRecord::Schema.define(version: 20150529183140) do
     t.datetime "updated_at",             null: false
     t.integer  "likes",      default: 0
   end
+
+  create_table "simple_hashtag_hashtaggings", force: :cascade do |t|
+    t.integer "hashtag_id"
+    t.integer "hashtaggable_id"
+    t.string  "hashtaggable_type"
+  end
+
+  add_index "simple_hashtag_hashtaggings", ["hashtag_id"], name: "index_simple_hashtag_hashtaggings_on_hashtag_id"
+  add_index "simple_hashtag_hashtaggings", ["hashtaggable_id", "hashtaggable_type"], name: "index_hashtaggings_hashtaggable_id_hashtaggable_type"
+
+  create_table "simple_hashtag_hashtags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "simple_hashtag_hashtags", ["name"], name: "index_simple_hashtag_hashtags_on_name"
 
 end

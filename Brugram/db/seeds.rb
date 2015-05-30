@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Photo.delete_all
-Photo.create! caption: "World Cup!", image: "http://www.south-african-hotels.com/media/the_cape_town_city_tour_12_[320x200].jpg"
-Photo.create! caption: "CT!", image: "http://www.uncoverthecape.co.za/local-attractions/table-mountain-cableway/table-mountain-cableway/images/image200_220.jpg"
+Photo.create! caption: "World Cup!", image: "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2010/3/2/1267527902864/2010-World-Cup-Venues--Ci-010.jpg"
+Photo.create! caption: "Cape Town", image: "http://www.south-african-hotels.com/media/cape-town-overview.jpg"
