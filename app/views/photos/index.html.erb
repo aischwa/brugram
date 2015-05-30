@@ -1,4 +1,7 @@
 <%= render 'navbar' %>
+
+<h2><%= link_to "Add your picture!", new_photo_path %> </h2>
+
 <div class="container">
  <!--  <h3>Basic Navbar Example</h3> -->
   <p><% @photos.each do |photo| %></p>
