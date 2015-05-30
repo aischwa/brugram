@@ -49,6 +49,6 @@ def like
 
 		private 
 		def photo_params
-			params.requrie(:photo).permit(:caption, :image, :likes)
+			params.require(:photo).permit(:caption, :image, :likes)
 		end
 	end
