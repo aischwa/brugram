@@ -18,7 +18,7 @@ class PhotosController < ActionController::Base
 		def create
 			@photo = Photo.new(photo_params)
 			if @photo.save
-				redirect_to @place
+				redirect_to @photo
 			else
 				render :new
 			end
