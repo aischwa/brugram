@@ -7,7 +7,7 @@ resources :photos do
  resources :comments
 end
  get "/photos/:id/like" => "photos#like", as: 'like_photo'
-  
+ get "/comments/:id/like_comment" => "comments#like_comment", as: 'like_comment_comment'
   # You can have the root of your site routed with "root"
   root 'photos#index'
 

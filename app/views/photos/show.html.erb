@@ -4,22 +4,20 @@
 <%= image_tag(@photo.image, :width => "50%", :height => "50%") %>
 <p><%= @photo.caption %></p>
 
-<p><%= link_to 'Edit Photo', edit_photo_path(@photo) %></p>
-<p><%= link_to 'Back', photos_path %></p>
+<table style="width: 250px; line-height:20px;">
+	<tr>
+     	<td><button><%= link_to 'Like', like_photo_path %></button> <%= @photo.likes %></td>
+		<td><%= link_to 'Edit', edit_photo_path(@photo) %></td>
+		<td><%= link_to 'Back', photos_path %></td>
+	</tr>
+</table>
 <h2>Comments</h2>
-"hhhahhahha"
+
   <%= render @photo.comments %>
 
 <h2>Add a comment:</h2>
 <%=render 'comments/form' %>
-
- <tr>
-      
-      <td><%= link_to 'like', like_photo_path %></td>
-      
-    </tr>
-
-              <%= @photo.likes %>
+ 
               </div>
 
 </body>
